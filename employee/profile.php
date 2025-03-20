@@ -18,13 +18,13 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DASHBOARD</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
     </style>
     <link rel="stylesheet" href="../css/default.css?=v<?php echo time(); ?>">
-    <script src="../js/dashboard.js"></script>
+    <link rel="stylesheet" href="../css/employee_profile.css?=v<?php echo time(); ?>">
 </head>
 <body>
     <div class="navigation">
@@ -33,7 +33,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
         </div>
         <div class="navigations">
             <ul>
-                <li><a href=""><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
+                <li><a href="dashboard.php"><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
                 <li><a href=""><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
                 <li><a href=""><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
             </ul>
@@ -47,7 +47,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
             <div class="user">
                 <button type="submit" id="cbtn" onclick="pslbtn()">
                     <img src="../upload_image/<?php echo $result["user_profile"] ?>" alt="">
-                    <p><?php echo $result["Last_name"] ?> <i class="fa-solid fa-v"></i></p>
+                    <p><?php echo $result["Last_name"] ?> <i class="fa-solid fa-v" id="iUser"></i></p>
                 </button>
                 <div class="psl" id="psl" style="display: none;">
                     <a href="profile.php"><i class="fa-solid fa-user"></i> PROFILE</a>
@@ -57,12 +57,44 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
             </div>
         </div>
         <div class="main-title">
-                <h3>DASHBOARD</h3>
-            </div>
+            <h3>PROFILE</h3>
+        </div>
         <div class="contents">
-            
+            <div class="profiling">
+                <img src="../upload_image/<?php echo $result["user_profile"] ?>" alt="">
+                <p><?php echo $result["first_name"] . " " . $result["Middle_name"] . " " . $result["Last_name"]; ?></p>
+                <p id="mt"><?php echo $result["id"]; ?></p>
+                <p id="mt"><?php echo $result["user_role"]; ?></p>
+                <button type="submit" id="pdsbtn" onclick="gtpds()">PERSONAL DATASHEET</button>
+                <button type="submit" id="dcbtn" onclick="gtc()">CATEGORY</button>
+                <button type="submit" id="jdbtn" onclick="gtjd()">JOB DETAILS</button>
+                <button type="submit" id="dbtn" onclick="gtd()">DOCUMENTS</button>
+                <button type="submit" id="albtn" onclick="gtal()">ATTENDANCE & LEAVE</button>
+                <button type="submit" id="pbbtn" onclick="gtpb()">PAYROLL & BENEFITS</button>
+            </div>
+            <div class="profile-contents">
+                <div class="pds" id="pds">
+                    <h1>pds na bilat</h1>
+                </div>
+                <div class="category" id="c" style="display: none;">
+                    <h1>category na bilat</h1>
+                </div>
+                <div class="job-details" id="jd" style="display: none;">
+                    <h1>job details na bilat</h1>
+                </div>
+                <div class="documents" id="d" style="display: none;">
+                    <h1>documents na bilat</h1>
+                </div>
+                <div class="attendance-leave" id="al" style="display: none;">
+                    <h1>attendance leave na bilat</h1>
+                </div>
+                <div class="payroll-benefits" id="pb" style="display: none;">
+                    <h1>payroll benefits na bilat</h1>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="../js/profile.js"></script>
     <script>
         function pslbtn(){
             const getChoices = document.getElementById("psl");
