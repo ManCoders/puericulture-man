@@ -1,0 +1,69 @@
+*{
+    font-family: sans-serif;
+}
+:root{
+    --red_line: #E62027;
+    --black: #000;
+    --white: #fff;
+    --background: #414251;
+    --whitebg: #F1F3FA;
+}
+.contents{
+    max-width: 86.2%;
+    margin: 1%;
+    min-height: 77vh;
+    background-color: var(--whitebg);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-left: 1rem;
+    border-radius: 5px;
+    padding: 0;
+}
+.profiling, .profile-contents{
+    width: 29%;
+    height: 77vh;
+    border: solid 1px var(--red_line);
+    margin-right: 1%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: var(--white);
+}
+.profile-contents{
+    width: 70%;
+    height: 78.5vh;
+    margin: 0;
+    padding: 5px 10px;
+}
+.profiling img{
+    width: 150px;
+    height: 150px;
+}
+.profiling button{
+    border: none;
+    border-bottom: solid #e620276e 1px;
+    background: none;
+    width: 100%;
+    height: 3rem;
+}
+/* #pdsbtn{
+    border: solid 1px var(--red_line);
+    color: var(--red_line);
+    font-weight: 800;
+} */
+.active {
+    background-color: var(--red_line);
+    color: var(--red_line) !important; 
+    font-weight: 800 !important;
+    border: solid 1px var(--red_line) !important;
+}
+#mt{
+    margin-top: 0;
+}
+.user p, #iUser{
+    color: var(--red_line);
+}
