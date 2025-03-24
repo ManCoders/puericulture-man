@@ -3,6 +3,8 @@
 require_once '../include/config.php';
 require_once '../include/session.php';
 
+
+/* Change mo nalng pag ok na para hind kana mag login login Hahahah */
 isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 
     $query = "SELECT users.*, personal_information_st.*, pds_pi.* FROM pds_pi
