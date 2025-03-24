@@ -134,10 +134,11 @@
                 $_SESSION["last_regeneration"] = time();
 
                 if ($_SESSION["user_role"] == "super_admin") {
-                    header("Location: ../super_admin/dashboard.php");
+                    header("Location: ../super_admin/");
                 }else if($_SESSION["user_role"] == "employee"){
                     header("Location: ../employee/dashboard.php");
                 }else if($_SESSION["user_role"] == "payroll"){
+                    
                     header("Location: ../payroll/");
                 }
 

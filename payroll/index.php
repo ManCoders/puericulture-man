@@ -1,4 +1,10 @@
 <?php
+
+require_once '../include/config.php';
+require_once '../include/session.php';
+
+echo isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -23,10 +29,15 @@ $totalNetPay = $row['total_net_pay'];
 $employees = $conn->query("SELECT * FROM employees");
 
 $conn->close();
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +45,7 @@ $conn->close();
     <link rel="stylesheet" href="./assets/css/text.css">
     <script src="./assets/npm/charts.js"></script>
 </head>
+
 <body>
 
     <div class="container">
@@ -70,26 +82,29 @@ $conn->close();
         </table>
 
         <h2>Monthly Salary Overview</h2>
-        <canvas id="salaryChart"></canvas>
+        <canvas style="height: 380px" id="salaryChart"></canvas>
+        <script>
+            const ctx = document.getElementById('salaryChart').getContext('2d');
+            const salaryChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Salaries', 'Taxes', 'Net Pay'],
+                    datasets: [{
+                        label: 'Amount in ₱',
+                        data: [<?php echo $totalSalaries; ?>, <?php echo $totalTaxes; ?>, <?php echo $totalNetPay; ?>],
+                        backgroundColor: ['blue', 'red', 'green']
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false
+                }
+            });
+        </script>
     </div>
 
-    <script>
-        const ctx = document.getElementById('salaryChart').getContext('2d');
-        const salaryChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Salaries', 'Taxes', 'Net Pay'],
-                datasets: [{
-                    label: 'Amount in ₱',
-                    data: [<?php echo $totalSalaries; ?>, <?php echo $totalTaxes; ?>, <?php echo $totalNetPay; ?>],
-                    backgroundColor: ['blue', 'red', 'green']
-                }]
-            }
-        });
 
-
-        
-    </script>
 
 </body>
+
 </html>
