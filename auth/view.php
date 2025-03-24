@@ -76,7 +76,7 @@ function signup_errors(){
         unset($_SESSION['signup_errors']);
     }else if(isset($_GET["signup"]) && $_GET["signup"] == "success"){
         echo '<div class="success-div">';
-            echo '<a class="a-register" href="index.php"><p>Account successfully created</p>tap to continue</a>';
+            echo '<a class="a-register" href="index.php"><p>Account has been successfully created</p>tap to continue</a>';
         echo '</div>';
     }
 }

@@ -5,8 +5,9 @@ require_once '../include/session.php';
 
 isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 
-    $query = "SELECT users.*, personal_information.* FROM users
-        INNER JOIN personal_information ON users.id = personal_information.users_id
+    $query = "SELECT users.*, personal_information_st.*, pds_pi.* FROM pds_pi
+        INNER JOIN users ON pds_pi.users_id = users.id
+        INNER JOIN personal_information_st ON pds_pi.pdspi_id = personal_information_st.pdspis_id
         WHERE users.id = :id";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":id", $users_id);
@@ -47,7 +48,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
             <div class="user">
                 <button type="submit" id="cbtn" onclick="pslbtn()">
                     <img src="../upload_image/<?php echo $result["user_profile"] ?>" alt="">
-                    <p><?php echo $result["Last_name"] ?> <i class="fa-solid fa-v"></i></p>
+                    <p><?php echo isset($result["Last_name"]) ? $result["Last_name"] : null; ?> <i class="fa-solid fa-v"></i></p>
                 </button>
                 <div class="psl" id="psl" style="display: none;">
                     <a href="profile.php"><i class="fa-solid fa-user"></i> PROFILE</a>

@@ -26,8 +26,8 @@ body{
 }
 .column{
     display: block;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 .header{
     display: flex;
@@ -57,6 +57,7 @@ h2, h3{
     text-transform: uppercase;
     margin: 10px;
     font-weight: 800;
+    text-align: center;
 }
 .user img{
     width: 50px;
@@ -92,12 +93,13 @@ h2, h3{
     width: fit-content;
     height: fit-content;
     transform: translate(6.5rem, 5rem);
-    background-color: var(--white);
+    background-color: var(--background);
     padding: 10px;
     border-radius: 10px;
-    background: #e0e0e0;
-    box-shadow:  2px 2px 5px #b3b3b3,
-                -2px -2px 5px #ffffff;
+    box-shadow: 0 0 5px 1px var(--black);
+    /* background: #e0e0e0; */
+    /* box-shadow:  2px 2px 5px #b3b3b3,
+                -2px -2px 5px #ffffff; */
 }
 .user i:active, button:active{
     color: var(--red_line);
@@ -133,7 +135,7 @@ h2, h3{
 }
 .psl a{
     margin: 10px;
-    color: var(--black);
+    color: var(--white);
     width: fit-content;
     height: fit-content;
 }
@@ -141,7 +143,7 @@ h2, h3{
     color: var(--red_line);    
 }
 .main-title{
-    max-width: 85%;
+    max-width: 84.7%;
     margin: 1%;
     min-height: 5%;
     background-color: var(--white);
@@ -153,16 +155,4 @@ h2, h3{
 }
 i{
     margin-right: 5px;
-}
-.contents{
-    max-width: 86.2%;
-    margin: 1%;
-    min-height: 77vh;
-    background-color: var(--whitebg);
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding-left: 1rem;
-    border-radius: 5px;
-    padding: 0;
 }

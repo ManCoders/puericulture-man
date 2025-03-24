@@ -14,7 +14,30 @@ echo isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_i
     <title>Document</title>
 </head>
 <body>
-    <h1>super admin sir!</h1>
-    <a href="../logout.php">logout</a>
+    <div class="navs">
+        <ul>
+            <li><a href="">DASHBOARD</a></li>
+            <li><a href="">DASHBOARD</a></li>
+            <li><a href="">DASHBOARD</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <div class="header">
+            <div class="logo">
+                <img src="" alt="LOGO">
+                <h1>DASHBOARD</h1>
+            </div>
+            <div class="go-to-profile">
+                <img src="" alt="profile">
+                <p>username</p>
+                <button>hehe</button>
+            </div>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+    
+    
 </body>
 </html>
