@@ -137,6 +137,8 @@
                     header("Location: ../super_admin/dashboard.php");
                 }else if($_SESSION["user_role"] == "employee"){
                     header("Location: ../employee/dashboard.php");
+                }else if($_SESSION["user_role"] == "payroll"){
+                    header("Location: ../payroll/");
                 }
 
                 $pdo = null;
