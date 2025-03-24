@@ -5,9 +5,10 @@ require_once '../include/session.php';
 
 isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 
-    $query = "SELECT users.*, personal_information.* FROM users
-        INNER JOIN personal_information ON users.id = personal_information.users_id
-        WHERE users.id = :id";
+    $query = "SELECT users.*, personal_information_st.*, pds_pi.* FROM pds_pi
+        INNER JOIN users ON pds_pi.users_id = users.id
+        INNER JOIN personal_information_st ON pds_pi.pdspi_id = personal_information_st.pdspis_id
+    WHERE users.id = :id";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":id", $users_id);
     $stmt->execute();
@@ -18,7 +19,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PROFILE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <style>
       @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
@@ -73,8 +74,53 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                 <button type="submit" id="pbbtn" onclick="gtpb()">PAYROLL & BENEFITS</button>
             </div>
             <div class="profile-contents">
-                <div class="pds" id="pds">
-                    <h1>pds na bilat</h1>
+                <div class="pds" id="pds" style="display: block;">
+                    <div class="tabtns">
+                        <h4>PERSONAL DATA SHEET</h4>
+                    </div>
+                    <div class="buttons-navs">
+                        <li><button>Personal Information</button></li>
+                        <li><button>Family Background</button></li>
+                        <li><button>Educational Background</button></li>
+                        <li><button>CSE & WE</button></li>
+                        <li><button>OTHERS</button></li>
+                    </div>
+                    <div class="fields">
+                        <div class="name">
+                                <li><p><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
+                                <li><p><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li id="small"><p id="small">N/A</p><label for="" id="small">SUFFIX</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li id="small"><p id="small"><?php echo $result["Last_name"]; ?></p><label for="" id="small-l">BLOOD TYPE</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <h3 id="ra">RESIDENTIAL ADDRESS</h3>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <h3 id="ra">PERMANENT ADDRESS</h3>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                                <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                        </div>
+                    </div>
                 </div>
                 <div class="category" id="c" style="display: none;">
                     <h1>category na bilat</h1>

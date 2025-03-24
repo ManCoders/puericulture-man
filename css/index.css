@@ -160,3 +160,33 @@ body{
     padding: 5px 0;
     color: var(--red);
 }
+.success-div{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow:  5px 5px 8px #b3b3b3,
+                -5px -5px 8px #ffffff;
+    transition: .5s;
+}
+.success-div a{
+    text-decoration: none;
+    color: var(--black);
+    margin: 10px 0;
+    transition: .5s;
+}
+.success-div p{
+    margin-top: 0;
+}
+.success-div a:hover{
+    color: green;
+}

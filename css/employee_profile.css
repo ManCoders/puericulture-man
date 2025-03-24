@@ -11,7 +11,7 @@
 .contents{
     max-width: 86.2%;
     margin: 1%;
-    min-height: 77vh;
+    min-height: 80vh;
     background-color: var(--whitebg);
     display: flex;
     align-items: start;
@@ -22,26 +22,32 @@
 }
 .profiling, .profile-contents{
     width: 29%;
-    height: 77vh;
+    height: 100vh;
     border: solid 1px var(--red_line);
+    border-bottom: none;
     margin-right: 1%;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: none;
+    border-top-left-radius: 10px;
     justify-content: start;
     align-items: center;
-    padding: 10px 10px;
     background-color: var(--white);
+    padding: 5px;
+    margin-bottom: 5px;
 }
 .profile-contents{
-    width: 70%;
-    height: 78.5vh;
+    width: 70vw;
     margin: 0;
-    padding: 5px 10px;
+    align-items: start;
+    padding: 0;
 }
 .profiling img{
     width: 150px;
     height: 150px;
+    border-radius: 50%;
+    border: solid 1px var(--black);
 }
 .profiling button{
     border: none;
@@ -66,4 +72,102 @@
 }
 .user p, #iUser{
     color: var(--red_line);
+}
+.pds{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.fields{
+    min-height: 63vh;
+    width: 97%;
+    padding: 5px 10px;
+}
+.name{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+    height: 64vh;
+    overflow-y: auto;
+}
+#small{
+    width: 6rem;
+}
+#small-l{
+    width: 8rem;
+    text-align: start;
+    display: flex;
+    justify-content: start;
+}
+#ra{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.name li, .name p{
+    text-align: center;
+    width: 12rem;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+.name p{
+    border: solid 1px var(--black);
+    height: 2rem;
+    margin: 5px 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+label{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.tabtns, .buttons-navs{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red_line);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.buttons-navs{
+    margin: 1%;
+    width: 98%;
+    border-radius: 5px;
+    height: 2rem;
+    background-color: var(--background);
+    justify-content: space-evenly;
+    padding: 5px 0;
+    align-items: center;
+}
+.buttons-navs button, .buttons-navs li{
+    width: fit-content;
+    height: 90%;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 15px;
+    color: var(--white);
+}
+.buttons-navs button{
+    margin-bottom: 5px;
+}
+.buttons-navs li:hover{
+    border-bottom: solid 1px var(--white);
 }

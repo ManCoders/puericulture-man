@@ -114,20 +114,23 @@ function username_taken(object $pdo, string $username){
    }
 }
 
-function uers_data(object $pdo, int $id, String $first_name, String $Last_name, String $Middle_name, String $email,
+function uers_data(object $pdo, int $user_id, String $first_name, String $Last_name, String $Middle_name, String $email,
     string $profile) {
 
-    $query = "INSERT INTO personal_information (users_id, first_name, Last_name, Middle_name, email, user_profile)
-        VALUES (:id, :first_name, :Last_name, :Middle_name, :email, :user_profile);";
+    $query = "INSERT INTO personal_information_st (pdspis_id, first_name, Last_name, Middle_name, email, user_profile)
+        VALUES (:pdspis_id, :first_name, :Last_name, :Middle_name, :email, :user_profile);";
 
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+    $stmt->bindParam(":pdspis_id", $user_id, PDO::PARAM_INT);
     $stmt->bindParam(":first_name", $first_name);
     $stmt->bindParam(":Last_name", $Last_name);
     $stmt->bindParam(":Middle_name", $Middle_name);
     $stmt->bindParam(":email", $email);
     $stmt->bindParam(":user_profile", $profile);
     $stmt->execute();
+
+    echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
+
 }
 
 function users_authentication(object $pdo, string $username, string $password){
@@ -144,9 +147,19 @@ function users_authentication(object $pdo, string $username, string $password){
     return(int) $pdo->lastInsertId();
 }
 
+function users_pdspi(object $pdo, int $id){
+    $query = "INSERT INTO pds_pi (users_id) VALUES (:users_id);";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(":users_id", $id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return(int) $pdo->lastInsertId();
+}
+
 function getUserIpnputobject(object $pdo, String $first_name, String $Last_name, String $Middle_name, String $email,
         string $profile, string $username, string $password) {
         
     $id = users_authentication($pdo, $username, $password); 
-    uers_data($pdo, $id, $first_name, $Last_name, $Middle_name, $email, $profile);
+    $user_id = users_pdspi($pdo, $id); 
+    uers_data($pdo, $user_id, $first_name, $Last_name, $Middle_name, $email, $profile);
 }
