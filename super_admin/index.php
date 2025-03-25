@@ -1,8 +1,8 @@
 <?php
 require_once '../include/config.php';
 require_once '../include/session.php';
-echo isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no login session 1"; /* you can use here the header('location: ../index.php') */
-
+echo isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no login session"; /* you can use here the header('location: ../index.php') */
+echo isset($_SESSION["username"]) ? $username = $_SESSION["username"] :"no username";
 ?>
 
 
