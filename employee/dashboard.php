@@ -63,7 +63,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                 <h3>DASHBOARD</h3>
             </div>
         <div class="contents">
-            
+            <h1>bilat na dashboard</h1>
         </div>
     </div>
     <script>
