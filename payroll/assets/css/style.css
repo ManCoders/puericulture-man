@@ -70,18 +70,17 @@ main{
 
 
 
-/* DASHBOARD STYLE */
-.dashboard-content{
-    display: flex;
-    color: #ffffff;
-    width: 1035px;
-    background-color: #c01818;
-    
-    margin: 1rem;
-    border-radius: 10px;
-    padding: 7px;
-    gap: 40rem;
-    height: 200px;
+.total-spend-row{
+    display:flex;
+    gap:300px;
+     margin-left:40px;
+}
+
+.charts
+{
+    display:flex; 
+    gap:50px; 
+    margin:20px;
 }
 
 .nav-1{

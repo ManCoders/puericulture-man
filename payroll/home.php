@@ -1,19 +1,27 @@
-<div>
-    <div class="dashboard-content">
-        <div class="nav-1">
-            <h3>Welcome back, <?php echo 'Manuel E. Daligdig' ?></h3>
-        </div>
-        <div class="nav-profile"><img src="./assets/images/user-avatar.png" alt="Profile Avatar" width="60">
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="main">
+    
 
 
-        </div>
-
-    </div>
-    <div style="display:flex; gap:50px; margin:20px;">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <h4 style="margin: 20px;">Summary Report</h4>
+    <div class="charts" >
+        
         <div><canvas id="myChart1" width="300px" height="300px"></canvas></div>
         <div><canvas id="myChart2" width="300px" height="300px"></canvas></div>
         <div><canvas id="myChart3" width="300px" height="300px"></canvas></div>
+    </div>
+   <section class="total-spend">
+   <div class="total-spend-row">
+        <div><p>Weekly: </p><h2 style="margin: 5px;">10.000.00</h2></div>
+        <div><p>Monthly</p><h2 style="margin: 5px;">10.000.00</h2></div>
+        <div><p>Yearly</p><h2 style="margin: 5px;">10.000.00</h2></div>
+        </div>
+   </section>
+
+   <div style="padding:10px; margin-top:50px; gap:10px; background-color:grey;">
+    <a href="" style="margin-right: 10px; color:#ffff; text-decoration: none; ">Print Weekly Reports</a>
+    <a href="" style="margin-right: 10px; color:#ffff; text-decoration: none; ">Print Monthly Reports</a>
+    <a href="" style="margin-right: 10px; color:#ffff;  text-decoration: none;">Print Yearly Reports</a>
     </div>
 
     <script>
@@ -22,9 +30,9 @@
         var chart1 = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
                 datasets: [{
-                    label: '# of Votes',
+                    label: 'Weekly Incomes',
                     data: [12, 19, 3, 5, 2, 3],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -63,7 +71,7 @@
             data: {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June'],
                 datasets: [{
-                    label: 'Series A',
+                    label: 'Monthly Incomes',
                     data: [12, 19, 3, 5, 2, 3],
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
@@ -86,9 +94,9 @@
         var chart1 = new Chart(ctx, {
             type: 'radar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
                 datasets: [{
-                    label: '# of Votes',
+                    label: 'Yearly Incomes',
                     data: [12, 19, 3, 5, 2, 3],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
