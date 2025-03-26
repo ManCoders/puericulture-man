@@ -4,30 +4,30 @@
 <div class="nav_main_bar">
     <nav class="nav" id="sidebar">
        
-           <div class="nav-item"> <img src="./assets/images/logo-sm.png" alt="Logo"></div>
+           <div class="nav-item"> <img style="width:100px; border-radius:50%;" src="./assets/images/puericulture_logo.jpg" alt="Logo"></div>
 
             <div class="nav-item">
-                <a href="" class="nav-link">
+                <a href="index.php?page=home" class="nav-home">
                     <span>Dashboard</span>
                 </a>
             </div>
             <div class="nav-item">
-                <a href="" class="nav-link">
-                    <span>Employee Management</span>
+                <a href="index.php?page=employee" class="nav-employee">
+                    <span>Employee Manage</span>
                 </a>
             </div>
             <div class="nav-item">
-                <a href="" class="nav-link">
-                    <span>PayRoll Process</span>
+                <a href="index.php?page=payroll" class="nav-payroll">
+                    <span>Payroll Process</span>
                 </a>
             </div>
             <div class="nav-item">
-                <a href="" class="nav-link">
+                <a href="index.php?page=salary" class="nav-salary">
                     <span>Salary Reports</span>
                 </a>
             </div>
-            <div class="nav-item" style="background-color: #fa8282;">
-                <a href="" class="nav-link">
+            <div class="nav-item" style="">
+                <a href="index.php?page=setting" class="nav-setting">
                     <span>Setting</span>
                 </a>
             </div>
@@ -40,33 +40,26 @@
 
 
 <script>
+$('.nav-<?php echo $_GET['page'] ?>').addClass('active');
+$('.nav-<?php echo $_GET['page'] ?>').css('background-color', '#007bff');
+$('.nav-<?php echo $_GET['page'] ?>').css('color', '#fff');
 
-    $('.nav-<?php echo $_GET['page'] ?>').addClass('active');
+$('.nav-item a').click(function() {
+    $('.nav-item a').removeClass('active');
+    $(this).addClass('active');
+    $(this).css('background-color', '#007bff');
+    $(this).css('color', '#fff');
+    $(this).siblings().css('background-color', '');
+    $(this).siblings().css('color', '');
+});
+
+if ($('.nav-<?php echo $_GET['page'] ?>').parent().hasClass('collapse')) {
+    const parentID = $('.nav-<?php echo $_GET['page'] ?>').parent().attr('id');
+    $(`a[href="#${parentID}"]`)
+        .removeClass('collapsed')
+        .attr('aria-expanded', true);
+    $('.nav-<?php echo $_GET['page'] ?>').parent().addClass('show');
+}
 
 
-    if ($('.nav-<?php echo $_GET['page'] ?>').parent().hasClass('collapse')) {
-        const parentID = $('.nav-<?php echo $_GET['page'] ?>').parent().attr('id');
-        $(`a[href="#${parentID}"]`)
-            .removeClass('collapsed')
-            .attr('aria-expanded', true);
-        $('.nav-<?php echo $_GET['page'] ?>').parent().addClass('show');
-    }
-
-    // Toggle sidebar on small screens
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggleRight = document.getElementById('sidebarToggleRight');
-    const sidebarToggleLeft = document.getElementById('sidebarToggleLeft');
-
-
-    sidebarToggleRight.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarToggleRight.style.display = 'none';
-        sidebarToggleLeft.style.display = 'block';
-    });
-
-    sidebarToggleLeft.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarToggleRight.style.display = 'block';
-        sidebarToggleLeft.style.display = 'none';
-    });
 </script>

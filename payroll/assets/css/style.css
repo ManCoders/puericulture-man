@@ -24,25 +24,39 @@ nav{
     background-color: var(--nav_content_bg);
 }
 
-.nav-item{
-    
-    padding: 1rem;
+.nav-item {
+    padding: 10px;
     cursor: pointer;
+}
+
+.active{
+    background-color: #fa8282;
 }
 
 .nav-item a {
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
+    padding: 23px;
 }
 
 .nav_main_bar{
-    width: 20%;
+    width: 230px;
+    position: fixed;
 }
 
 .nav-item img{
    display: flex;
    margin-left: 3rem;
    justify-content: center;
+}
+
+main{
+    position: fixed;
+    left: 260px;
+    width: 100%;
+    height: 92vh;
+    border-radius: 10px;
+    background-color: #c01010;
 }
