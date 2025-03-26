@@ -4,7 +4,7 @@ ini_set('session.use_only_cookies', 1);
 ini_set('session.use_strict_mode', 1);
 ini_set('session.gc_maxlifetime', 86400);
 
-$host = ($_SERVER['HTTP_HOST'] === 'localhost') ? 'localhost' : '192.168.1.21';
+$host = ($_SERVER['HTTP_HOST'] === 'localhost') ? 'localhost' : '192.168.1.117';
 
 session_set_cookie_params([
     'lifetime' => 86400, 
