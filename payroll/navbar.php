@@ -4,10 +4,9 @@
 
 
 <div class="nav_main_bar">
-    <nav class="nav" id="sidebar">
-       
-           <div class="nav-item"> <img style="width:100px; border-radius:50%;" src="./assets/images/puericulture_logo.jpg" alt="Logo"></div>
+<div class="logo"> <img style="width:100px; border-radius:50%;" src="./assets/images/puericulture_logo.jpg" alt="Logo"></div>
 
+    <nav class="nav" id="sidebar">
             <div class="nav-item">
                 <a href="index.php?page=home" class="nav-home">
                     <span>Dashboard</span>
@@ -29,7 +28,7 @@
                     <span>Files 201</span>
                 </a>
             </div>
-            <div class="nav-item" style="">
+            <div class="nav-item" >
                 <a href="index.php?page=setting" class="nav-setting">
                     <span>Setting</span>
                 </a>
@@ -43,7 +42,7 @@
 
 
 <script>
-$('.nav-<?php echo $_GET['page'] ?>').addClass('active');
+$('.nav-item').addClass('active');
 $('.nav-<?php echo $_GET['page'] ?>').css('background-color', '#007bff');
 $('.nav-<?php echo $_GET['page'] ?>').css('color', '#fff');
 

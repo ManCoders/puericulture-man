@@ -26,17 +26,22 @@ nav{
     border-radius: 10px;
     text-align: start;
     background-color: var(--nav_content_bg);
+    
 }
 
 .nav-item {
     padding: 15px;
     width: 100%;
     cursor: pointer;
+   
 }
 
-.active{
-    background-color: #fc6f6f;
+.nav-item:active {
+    background-color: #df4141;
+    border-radius: 10px;
+    width: 12rem;
 }
+
 
 .nav-item a {
     color: #f8f8f8;
