@@ -18,10 +18,10 @@
         </div>
    </section>
 
-   <div style="padding:10px; margin-top:50px; gap:10px; background-color:grey;">
-    <a href="" style="margin-right: 10px; color:#ffff; text-decoration: none; ">Print Weekly Reports</a>
-    <a href="" style="margin-right: 10px; color:#ffff; text-decoration: none; ">Print Monthly Reports</a>
-    <a href="" style="margin-right: 10px; color:#ffff;  text-decoration: none;">Print Yearly Reports</a>
+   <div class="dashboard-report" >
+    <a class="print-dashboard-report" href="" >Print Weekly Reports</a>
+    <a class="print-dashboard-report" href="" >Print Monthly Reports</a>
+    <a class="print-dashboard-report" href="" >Print Yearly Reports</a>
     </div>
 
     <script>
