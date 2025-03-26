@@ -7,6 +7,7 @@
     --white: #fff;
     --background: #414251;
     --whitebg: #F1F3FA;
+    --mainBG: rgb(20, 20, 20);
 }
 body{
     display: flex;
@@ -22,7 +23,7 @@ body{
 .navigation{
     min-width: 12%;
     height: 100vh;
-    background-color: var(--background);
+    background-color: var(--mainBG);
 }
 .column{
     display: block;
@@ -33,7 +34,7 @@ body{
     display: flex;
     min-height: 10%;
     width: 100vw;
-    background-color: var(--background);
+    background-color: var(--mainBG);
     align-items: center;
 }
 .logo {

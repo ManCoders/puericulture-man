@@ -3,6 +3,7 @@
     --red: #E62027;
     --blackground: #272831;
     --black: #000;
+    --mainBG: rgb(20, 20, 20);
 }
 *{
     font-family: sans-serif;
@@ -88,7 +89,7 @@ body{
     margin-bottom: 15px;
 }
 .title{
-    background: linear-gradient(40deg, var(--white), var(--blackground), var(--blackground), var(--white));
+    background: linear-gradient(40deg, var(--white), var(--mainBG), var(--mainBG), var(--white));
     border-left: solid 3px var(--black);
 }
 .title img, .second-column img, #profile{
