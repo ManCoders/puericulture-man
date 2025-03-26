@@ -104,7 +104,9 @@ main{
 }
 
 .print-dashboard-report{
-    margin-right: 10px; color:#ffff; text-decoration: none; 
+    margin-right: 40px; 
+    color:#000000; 
+    text-decoration: none; 
 }
 
 /**************************** DASHBOARD END LAYOUT ***************************************** */
