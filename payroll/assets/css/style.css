@@ -1,10 +1,11 @@
 :root{
     /* Colors */
-    --nav_content_bg: #b1acac;
-
+   /* --nav_content_bg: #c43e01;
+    --content-background:linear-gradient(to bottom, #dd0404,#d35151, #680101); */
+    --nav_content_bg: #c40101;
+    --content-background: #fff;
     --nav_selection-color:#fa8282;
-    --nav_margin: 0;
-    --nav_text_gap: 1rem;
+
 }
 
 *{
@@ -13,28 +14,31 @@
 }
 
 body { 
+    font-family: Arial, sans-serif;
+    background-color: var(--nav_content_bg);
     display: flex;
+    color: #6b6969;
 }
 nav{
     overflow: hidden;
     width: 100%;
-    height: 92vh;
+    height: 94vh;
     border-radius: 10px;
     text-align: start;
     background-color: var(--nav_content_bg);
 }
 
 .nav-item {
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
 }
 
 .active{
-    background-color: #fa8282;
+    background-color: #fc6f6f;
 }
 
 .nav-item a {
-    color: #fff;
+    color: #f8f8f8;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
@@ -55,8 +59,8 @@ nav{
 main{
     position: fixed;
     left: 260px;
-    width: 100%;
-    height: 92vh;
+    width: 1080px;
+    height: 94vh;
     border-radius: 10px;
-    background-color: #c01010;
+    background: var(--content-background);
 }

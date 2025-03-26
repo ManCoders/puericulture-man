@@ -11,11 +11,7 @@
                     <span>Dashboard</span>
                 </a>
             </div>
-            <div class="nav-item">
-                <a href="index.php?page=employee" class="nav-employee">
-                    <span>Employee Manage</span>
-                </a>
-            </div>
+            
             <div class="nav-item">
                 <a href="index.php?page=payroll" class="nav-payroll">
                     <span>Payroll Process</span>
@@ -24,6 +20,11 @@
             <div class="nav-item">
                 <a href="index.php?page=salary" class="nav-salary">
                     <span>Salary Reports</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="index.php?page=employee" class="nav-employee">
+                    <span>Files 201</span>
                 </a>
             </div>
             <div class="nav-item" style="">
