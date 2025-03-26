@@ -1,44 +1,49 @@
 <script></script>
 <link rel="stylesheet" href="./assets/css/style.css">
 
-<div class="logo">
-    <img src="./assets/img/logo.png" alt="Logo">
-</div>
-<nav class="nav" id="sidebar">
-    <div class="nav-item">
-    <a href="" class="nav-link">
-        <span>Dashboard</span>
-    </a>
-</div>
-<div class="nav-item">
-    <a href="" class="nav-link">
-        <span>Employee Management</span>
-    </a>
-</div>
-<div class="nav-item">
-    <a href="" class="nav-link">
-        <span>PayRoll Process</span>
-    </a>
-</div>
-<div class="nav-item">
-    <a href="" class="nav-link">
-        <span>Salary Reports</span>
-    </a>
-</div>
-<div class="nav-item" style="background-color: #fa8282;">
-    <a href="" class="nav-link">
-        <span>Setting</span>
-    </a>
+<div class="nav_main_bar">
+    <nav class="nav" id="sidebar">
+       
+           <div class="nav-item"> <img src="./assets/images/logo-sm.png" alt="Logo"></div>
+
+            <div class="nav-item">
+                <a href="" class="nav-link">
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">
+                    <span>Employee Management</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">
+                    <span>PayRoll Process</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="" class="nav-link">
+                    <span>Salary Reports</span>
+                </a>
+            </div>
+            <div class="nav-item" style="background-color: #fa8282;">
+                <a href="" class="nav-link">
+                    <span>Setting</span>
+                </a>
+            </div>
+
+        </div>
+    </nav>
 </div>
 
+</div>
 
-</nav>
 
 <script>
-    
+
     $('.nav-<?php echo $_GET['page'] ?>').addClass('active');
 
-    
+
     if ($('.nav-<?php echo $_GET['page'] ?>').parent().hasClass('collapse')) {
         const parentID = $('.nav-<?php echo $_GET['page'] ?>').parent().attr('id');
         $(`a[href="#${parentID}"]`)

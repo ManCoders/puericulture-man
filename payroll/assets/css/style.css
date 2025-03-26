@@ -17,7 +17,7 @@ body {
 }
 nav{
     overflow: hidden;
-    width: 20%;
+    width: 100%;
     height: 92vh;
     border-radius: 10px;
     text-align: start;
@@ -35,4 +35,14 @@ nav{
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
+}
+
+.nav_main_bar{
+    width: 20%;
+}
+
+.nav-item img{
+   display: flex;
+   margin-left: 3rem;
+   justify-content: center;
 }
