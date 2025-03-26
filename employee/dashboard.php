@@ -4,8 +4,13 @@ require_once '../include/config.php';
 require_once '../include/session.php';
 
 
+
 /* Change mo nalng pag ok na para hind kana mag login login Hahahah */
 isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
+
+if($users_id == null){
+    header("Location: ../index.php");
+}
 
     $query = "SELECT users.*, personal_information_st.*, pds_pi.* FROM pds_pi
         INNER JOIN users ON pds_pi.users_id = users.id
@@ -36,9 +41,9 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
         </div>
         <div class="navigations">
             <ul>
-                <li><a href=""><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
-                <li><a href=""><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
-                <li><a href=""><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
+                <li><a href="dashboard.php"><i class="fa-solid fa-house-user"></i> DASHBOARD</a></li>
+                <li><a href="payroll.php"><i class="fa-solid fa-house-user"></i> PAYROLL</a></li>
+                <li><a href="attendance_Leave.php"><i class="fa-solid fa-house-user"></i> ATTENDANCE</a></li>
             </ul>
         </div>
     </div>

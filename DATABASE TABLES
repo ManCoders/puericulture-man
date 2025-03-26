@@ -1,0 +1,13 @@
+CREATE TABLE personal_information_th(
+    personal_id_th INT(11) NOT NULL AUTO_INCREMENT,
+    pdspis_id INT(11) NOT NULL,
+    perma_house_block VARCHAR(100) NOT NULL,
+    perma_street VARCHAR(100) NOT NULL,
+    perma_subdivision VARCHAR(100) NOT NULL,
+    perma_barangay VARCHAR(100) NOT NULL,
+    perma_city_muntinlupa VARCHAR(100) NOT NULL,
+    perma_province VARCHAR(100) NOT NULL,
+    perma_zip_code VARCHAR(100) NOT NULL,
+    PRIMARY KEY(personal_id_th),
+   	FOREIGN KEY(pdspis_id) REFERENCES pds_pi(pdspi_id)
+);
