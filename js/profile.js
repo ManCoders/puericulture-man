@@ -74,44 +74,6 @@ function gtd(){
         dd.style.display = 'none'; 
     }
 }
-function gtal(){
-    const dpds = document.getElementById("pds");
-    const dc = document.getElementById("c");
-    const djd = document.getElementById("jd");
-    const dd = document.getElementById("d");
-    const dal = document.getElementById("al");
-    const dpb = document.getElementById("pb");
-
-    if(dal.style.display == 'none'){
-        dpds.style.display = 'none'; 
-        dc.style.display = 'none'; 
-        djd.style.display = 'none'; 
-        dd.style.display = 'none'; 
-        dal.style.display = 'flex'; 
-        dpb.style.display = 'none'; 
-    }else{
-        dal.style.display = 'none'; 
-    }
-}
-function gtpb(){
-    const dpds = document.getElementById("pds");
-    const dc = document.getElementById("c");
-    const djd = document.getElementById("jd");
-    const dd = document.getElementById("d");
-    const dal = document.getElementById("al");
-    const dpb = document.getElementById("pb");
-
-    if(dpb.style.display == 'none'){
-        dpds.style.display = 'none'; 
-        dc.style.display = 'none'; 
-        djd.style.display = 'none'; 
-        dd.style.display = 'none'; 
-        dal.style.display = 'none'; 
-        dpb.style.display = 'flex'; 
-    }else{
-        dpb.style.display = 'none'; 
-    }
-}
 document.addEventListener("DOMContentLoaded", function () {
     // Highlight PDS button when profile page loads
     const pdsButton = document.getElementById("pdsbtn");

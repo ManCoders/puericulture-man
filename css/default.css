@@ -121,11 +121,15 @@ h2, h3{
     font-size: 14px;
     transition: .5s;
     font-weight: bolder;
-    width: 100%;
+    width: 80%;
     height: 3rem;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     display: flex;
+}
+.navigations li{
+    width: 100%;
+    justify-content: center;
 }
 .navigations li:hover{
     background-color: var(--black);

@@ -129,8 +129,11 @@ function uers_data(object $pdo, int $user_id, String $first_name, String $Last_n
     $stmt->bindParam(":user_profile", $profile);
     $stmt->execute();
 
-    echo json_encode($stmt->fetch(PDO::FETCH_ASSOC));
-
+    if ($stmt->execute()) {
+        echo json_encode(["success" => true, "message" => "User inserted successfully."]);
+    } else {
+        echo json_encode(["success" => false, "message" => "Failed to insert user."]);
+    }
 }
 
 function users_authentication(object $pdo, string $username, string $password){

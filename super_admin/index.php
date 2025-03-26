@@ -16,6 +16,6 @@ echo isset($_SESSION["username"]) ? $username = $_SESSION["username"] :"no usern
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>this is super admin</h1>
 </body>
 </html>
