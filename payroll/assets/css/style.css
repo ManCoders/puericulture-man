@@ -30,6 +30,7 @@ nav{
 
 .nav-item {
     padding: 15px;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -39,7 +40,7 @@ nav{
 
 .nav-item a {
     color: #f8f8f8;
-    font-size: 15px;
+    font-size: 19px;
     font-weight: bold;
     text-decoration: none;
     padding: 23px;
@@ -53,7 +54,7 @@ nav{
 .nav-item img{
    display: flex;
    margin-left: 3rem;
-   justify-content: center;
+   
 }
 
 main{
@@ -63,4 +64,37 @@ main{
     height: 94vh;
     border-radius: 10px;
     background: var(--content-background);
+    overflow: hidden;
+}
+
+
+
+
+/* DASHBOARD STYLE */
+.dashboard-content{
+    display: flex;
+    color: #ffffff;
+    width: 1035px;
+    background-color: #c01818;
+    
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 7px;
+    gap: 40rem;
+    height: 200px;
+}
+
+.nav-1{
+    width: 40%;
+    margin: 5px;
+    text-decoration: none;
+    font-family :'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.nav-profile{
+    margin: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
 }

@@ -1,5 +1,7 @@
 <script></script>
 <link rel="stylesheet" href="./assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <div class="nav_main_bar">
     <nav class="nav" id="sidebar">
