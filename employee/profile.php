@@ -71,11 +71,11 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                 <button type="submit" id="jdbtn" onclick="gtjd()">JOB DETAILS</button>
                 <button type="submit" id="dbtn" onclick="gtd()">DOCUMENTS</button>
             </div>
-            <div class="profile-contents">
+            <div class="profile-contents" id="profile-contents">
                 <div class="pds" id="pds" style="display: block;">
                     <div class="tabtns">
                         <h4>PERSONAL DATA SHEET</h4>
-                        <button>FILL UP</button>
+                        <button type="submit" id="fillUpBtn" onclick="fill_Up()">FILL UP</button>
                     </div>
                     <div class="buttons-navs">
                         <li><button>Personal Information</button></li>
@@ -84,7 +84,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                         <li><button>CSE & WE</button></li>
                         <li><button>OTHERS</button></li>
                     </div>
-                    <div class="fields">
+                    <div class="fields" id="fields">
                         <div class="name">
                                 <li><p><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
                                 <li><p><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
@@ -131,17 +131,16 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                     <h1>documents na bilat</h1>
                 </div>
             </div>
-        </div>
         <!-- ========================================= FILL UP ======================================== -->
-        <div class="fill-up" style="display: none;">
+        <div class="fill-up" id="fill-up" style="display: none;">
             <form action="../auth/function.php" method="post">
                 <div class="first-tab" style="overflow-y: scroll; height: 78vh;">
-                    <h3>PERSONAL INFORMATION</h3>
-                    <li><p><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
-                    <li><p><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
-                    <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
-                    <li><input type="text" name="" placeholder="name_extension"><label for=""></label></li>
-                    <li><label for=""></label></li><p></p>
+                    <h3 id="personal-info">PERSONAL INFORMATION</h3>
+                    <li><p id="dnt"><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
+                    <li><p id="dnt"><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
+                    <li><p id="dnt"><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                    <li><input type="text" name=""><label for="">NAME EXTENTION</label></li>
+                    <li><p id="dnt"><?php echo $result["email"]; ?></p><label for="">EMAIL</label></li>
                     <li><input type="text" name="sex"><label for="sex">Sex</label></li>
                     <li><input type="text" name="date_of_birth"><label for="date_of_birth">Date of Birth</label></li>
                     <li><input type="text" name="place_of_birth"><label for="place_of_birth">Place of Birth</label></li>
@@ -175,11 +174,12 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                     <li><input type="text" name="permanent_province"><label for="permanent_province">Province</label></li>
                     <li><input type="text" name="permanent_zip_code"><label for="permanent_zip_code">Zip Code</label></li>
                 </div>
-                <div class="second-tab">
+                <div class="second-tab" style="display: none;">
                     <h3>FAMILY BACKGROUND</h3>
                 </div>
             </form>
         </div>
+    </div>
     </div>
     <script src="../js/profile.js"></script>
     <script>
@@ -192,6 +192,21 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                 getChoices.style.display = 'flex';
             }else{
                 getChoices.style.display = 'none';
+            }
+        }
+
+        function fill_Up(){
+            const fields = document.getElementById("profile-contents");
+            const fill_Up = document.getElementById("fill-up");
+
+            console.log("button click")
+
+            if(fill_Up.style.display == 'none'){
+                fill_Up.style.display = 'flex';
+                fields.style.display = 'none';
+            }else{
+                fields.style.display = 'flex';
+                fill_Up.style.display = 'none';
             }
         }
     </script>

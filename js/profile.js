@@ -126,3 +126,15 @@ function gtpb() {
     setActiveButton("pbbtn");
     toggleSection("pb");
 }
+
+function fill_Up(){
+    const fill_Up = document.getElementById("fill-up");
+
+    console.log("button click")
+
+    if(fill_Up.style.display == 'none'){
+        fill_Up.style.display = 'flex';
+    }else{
+        fill_Up.style.display = 'none';
+    }
+}

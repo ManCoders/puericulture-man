@@ -21,7 +21,7 @@
     padding: 0;
 }
 .profiling, .profile-contents{
-    width: 29%;
+    min-width: 20vw;
     height: 78vh;
     border-bottom: none;
     margin-right: 1%;
@@ -114,14 +114,15 @@
     text-align: center;
     margin-bottom: 20px;
 }
-.name li, .name p{
+.name li, .name p, .first-tab li, .first-tab input, .first-tab p{
     text-align: center;
-    width: 12rem;
+    width: 12.5rem;
     height: fit-content;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
-.name p{
+.name p, .first-tab p, .first-tab input{
     border: solid 1px var(--black);
     height: 2rem;
     margin: 5px 0;
@@ -129,6 +130,9 @@
     display: flex;
     justify-content: center;
 
+}
+.first-tab li{
+    margin: 0 10px;
 }
 label{
     margin-bottom: 20px;
@@ -190,4 +194,34 @@ label{
     color: #fff;
     text-decoration: none;
     border: none;
+}
+.fill-up form, .first-tab{
+    width: 64.1vw;
+    height: 78.6vh;
+    margin: 0;
+    align-items: start;
+    padding: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.fill-up form{
+    border: solid 1px var(--red_line);
+}
+.first-tab{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#personal-info{
+    width: 64.1vw;
+    height: 3rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--red_line);
+}
+#dnt{
+    cursor: not-allowed;
 }
