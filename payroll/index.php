@@ -2,7 +2,7 @@
 
 require_once '../include/session.php';
 
-echo isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
+isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 
 ?>
 
@@ -21,8 +21,13 @@ echo isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_i
 </head>
 
 <body>
-
-    <?php echo $users_id; ?>
+    <?php include "navbar.php"; ?>
+    
+    <main id="view-panel" >
+      <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
+      	<?php include $page.'.php' ?>
+  </main>
+    
 
 
 

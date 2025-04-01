@@ -1,0 +1,1 @@
+<h1>Salary Page</h1>
