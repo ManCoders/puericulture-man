@@ -133,53 +133,65 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
             </div>
         <!-- ========================================= FILL UP ======================================== -->
         <div class="fill-up" id="fill-up" style="display: none;">
-            <form action="../auth/function.php" method="post">
-                <div class="first-tab" style="overflow-y: scroll; height: 78vh;">
-                    <h3 id="personal-info">PERSONAL INFORMATION</h3>
-                    <li><p id="dnt"><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
-                    <li><p id="dnt"><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
-                    <li><p id="dnt"><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
-                    <li><input type="text" name=""><label for="">NAME EXTENTION</label></li>
-                    <li><p id="dnt"><?php echo $result["email"]; ?></p><label for="">EMAIL</label></li>
-                    <li><input type="text" name="sex"><label for="sex">Sex</label></li>
-                    <li><input type="text" name="date_of_birth"><label for="date_of_birth">Date of Birth</label></li>
-                    <li><input type="text" name="place_of_birth"><label for="place_of_birth">Place of Birth</label></li>
-                    <li><input type="text" name="telephone_no"><label for="telephone_no">Telephone No.</label></li>
-                    <li><input type="text" name="mobile_no"><label for="mobile_no">Mobile No.</label></li>
-                    <li><input type="text" name="civil_status"><label for="civil_status">Civil Status</label></li>
-                    <li><input type="text" name="height"><label for="height">Height</label></li>
-                    <li><input type="text" name="weight"><label for="weight">Weight</label></li>
-                    <li><input type="text" name="blood_type"><label for="blood_type">Blood Type</label></li>
-                    <li><input type="text" name="gsis_id_no"><label for="gsis_id_no">GSIS ID No.</label></li>
-                    <li><input type="text" name="pagibig_id_no"><label for="pagibig_id_no">Pag-ibig ID No.</label></li>
-                    <li><input type="text" name="philhealth_no"><label for="philhealth_no">Philhealth No.</label></li>
-                    <li><input type="text" name="sss_no"><label for="sss_no">SSS No.</label></li>
-                    <li><input type="text" name="tin_no"><label for="tin_no">TIN No.</label></li>
-                    <li><input type="text" name="agency_no"><label for="agency_no">Agency No.</label></li>
-                    <li><input type="text" name="citizenship"><label for="citizenship">Citizenship</label></li>
-                    <h3 id="ra">RESIDENTIAL ADDRESS</h3>
-                    <li><input type="text" name="house_block"><label for="house_block">House/Block</label></li>
-                    <li><input type="text" name="street"><label for="street">Street</label></li>
-                    <li><input type="text" name="subdivision"><label for="subdivision">Subdivision</label></li>
-                    <li><input type="text" name="barangay"><label for="barangay">Barangay</label></li>
-                    <li><input type="text" name="city_muntinlupa"><label for="city_muntinlupa">City/Municipality</label></li>
-                    <li><input type="text" name="province"><label for="province">Province</label></li>
-                    <li><input type="text" name="zip_code"><label for="zip_code">Zip Code</label></li>
-                    <h3 id="ra">PERMANENT ADDRESS</h3>
-                    <li><input type="text" name="permanent_house_block"><label for="permanent_house_block">House/Block</label></li>
-                    <li><input type="text" name="permanent_street"><label for="permanent_street">Street</label></li>
-                    <li><input type="text" name="permanent_subdivision"><label for="permanent_subdivision">Subdivision</label></li>
-                    <li><input type="text" name="permanent_barangay"><label for="permanent_barangay">Barangay</label></li>
-                    <li><input type="text" name="permanent_city_muntinlupa"><label for="permanent_city_muntinlupa">City/Municipality</label></li>
-                    <li><input type="text" name="permanent_province"><label for="permanent_province">Province</label></li>
-                    <li><input type="text" name="permanent_zip_code"><label for="permanent_zip_code">Zip Code</label></li>
+            <div class="header-fill_up">
+                <div class="back-button">
+                    <button type="submit" id="gbtinfo" onclick="gbtInfo()">BACK</button>
                 </div>
-                <div class="second-tab" style="display: none;">
-                    <h3>FAMILY BACKGROUND</h3>
+                <div class="active-button">
+                    <button type="submit" id="headerBtn" onclick="HeaderButton()"><h4>PERSONAL INFORMATION v</h4></button>
                 </div>
-            </form>
+                <div class="inactive-buttons" id="inactive-buttons" style="display: none;">
+                    <button id="b">FAMILY BACKGROUND</button>
+                    <button>EDUCATIONAL BACKGROUND</button>
+                    <button>CSE & WE</button>
+                    <button>OTHERS</button>
+                </div>
+            </div>
+            <div class="body-fill_up">
+                <form action="../auth/function.php" method="post">
+                    <div class="first-tab">
+                        <button id="update_button">update</button>
+                        <li><p id="dnt"><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
+                        <li><p id="dnt"><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
+                        <li><p id="dnt"><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
+                        <li><input type="text" name="" id="small"><label for="">SUFFIX</label></li>
+                        <li><p id="dnt"><?php echo $result["email"]; ?></p><label for="">EMAIL</label></li>
+                        <li><input type="text" name="sex"><label for="sex">Sex</label></li>
+                        <li><input type="text" name="date_of_birth"><label for="date_of_birth">Date of Birth</label></li>
+                        <li><input type="text" name="place_of_birth"><label for="place_of_birth">Place of Birth</label></li>
+                        <li><input type="text" name="telephone_no"><label for="telephone_no">Telephone No.</label></li>
+                        <li><input type="text" name="mobile_no"><label for="mobile_no">Mobile No.</label></li>
+                        <li><input type="text" name="civil_status"><label for="civil_status">Civil Status</label></li>
+                        <li><input type="text" name="height"><label for="height">Height</label></li>
+                        <li><input type="text" name="weight"><label for="weight">Weight</label></li>
+                        <li><input type="text" name="blood_type" id="small"><label for="blood_type">Blood Type</label></li>
+                        <li><input type="text" name="gsis_id_no"><label for="gsis_id_no">GSIS ID No.</label></li>
+                        <li><input type="text" name="pagibig_id_no"><label for="pagibig_id_no">Pag-ibig ID No.</label></li>
+                        <li><input type="text" name="philhealth_no"><label for="philhealth_no">Philhealth No.</label></li>
+                        <li><input type="text" name="sss_no"><label for="sss_no">SSS No.</label></li>
+                        <li><input type="text" name="tin_no"><label for="tin_no">TIN No.</label></li>
+                        <li><input type="text" name="agency_no"><label for="agency_no">Agency No.</label></li>
+                        <li><input type="text" name="citizenship"><label for="citizenship">Citizenship</label></li>
+                        <h3 id="ra">RESIDENTIAL ADDRESS</h3>
+                        <li><input type="text" name="house_block"><label for="house_block">House/Block</label></li>
+                        <li><input type="text" name="street"><label for="street">Street</label></li>
+                        <li><input type="text" name="subdivision"><label for="subdivision">Subdivision</label></li>
+                        <li><input type="text" name="barangay"><label for="barangay">Barangay</label></li>
+                        <li><input type="text" name="city_muntinlupa"><label for="city_muntinlupa">City/Municipality</label></li>
+                        <li><input type="text" name="province"><label for="province">Province</label></li>
+                        <li><input type="text" name="zip_code"><label for="zip_code">Zip Code</label></li>
+                        <h3 id="ra">PERMANENT ADDRESS</h3>
+                        <li><input type="text" name="permanent_house_block"><label for="permanent_house_block">House/Block</label></li>
+                        <li><input type="text" name="permanent_street"><label for="permanent_street">Street</label></li>
+                        <li><input type="text" name="permanent_subdivision"><label for="permanent_subdivision">Subdivision</label></li>
+                        <li><input type="text" name="permanent_barangay"><label for="permanent_barangay">Barangay</label></li>
+                        <li><input type="text" name="permanent_city_muntinlupa"><label for="permanent_city_muntinlupa">City/Municipality</label></li>
+                        <li><input type="text" name="permanent_province"><label for="permanent_province">Province</label></li>
+                        <li><input type="text" name="permanent_zip_code"><label for="permanent_zip_code">Zip Code</label></li>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <script src="../js/profile.js"></script>
     <script>
@@ -207,6 +219,31 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
             }else{
                 fields.style.display = 'flex';
                 fill_Up.style.display = 'none';
+            }
+        }
+
+        function gbtInfo(){
+            const fields = document.getElementById("profile-contents");
+            const fill_Up = document.getElementById("fill-up");
+
+            console.log("button click")
+
+            if(fill_Up.style.display == 'flex'){
+                fill_Up.style.display = 'none';
+                fields.style.display = 'flex';
+            }else{
+                fields.style.display = 'none';
+                fill_Up.style.display = 'flex';
+            }
+        }
+
+        function HeaderButton(){
+            const header = document.getElementById("inactive-buttons");
+
+            if(header.style.display == 'none'){
+                header.style.display = 'flex';
+            }else{
+                header.style.display = 'none';
             }
         }
     </script>
