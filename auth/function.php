@@ -102,11 +102,6 @@
         }
 
 
-
-
-
-
-
         // ====================== LOGIN ==================== //
         if (isset($_POST['username'], $_POST['password'])) {
             $username = $_POST["username"];
@@ -154,6 +149,61 @@
             } catch (PDOException $e) {
                 die("Query Failed: " . $e->getMessage());
             }
+        }
+
+
+        // ====================== FILL UP PERSONAL INFORMATION ==================== //
+
+        if (isset($_POST["personal_information"]) && $_POST["personal_information"] == "personal"){
+            $name_extension = $_POST["name_extension"];
+            $sex = $_POST["sex"];
+            $date_of_birth = $_POST["date_of_birth"];
+            $place_of_birth = $_POST["place_of_birth"];
+            $telephone_no = $_POST["telephone_no"];
+            $mobile_no = $_POST["mobile_no"];
+            $civil_status = $_POST["civil_status"];
+            $height = $_POST["height"];
+            $weight = $_POST["weight"];
+            $blood_type = $_POST["blood_type"];
+            $pagibig_id_no = $_POST["pagibig_id_no"];
+            $philhealth_no = $_POST["philhealth_no"];
+            $sss_no = $_POST["sss_no"];
+            $tin_no = $_POST["tin_no"];
+            $agency_no = $_POST["agency_no"];
+            $citizenship = $_POST["citizenship"];
+            $house_block = $_POST["house_block"];
+            $street = $_POST["street"];
+            $subdivision = $_POST["subdivision"];
+            $barangay = $_POST["barangay"];
+            $city_muntinlupa = $_POST["city_muntinlupa"];
+            $province = $_POST["province"];
+            $zip_code = $_POST["zip_code"];
+            $perma_house_block = $_POST["perma_house_block"];
+            $perma_street = $_POST["perma_street"];
+            $perma_subdivision = $_POST["perma_subdivision"];
+            $perma_barangay = $_POST["perma_barangay"];
+            $perma_city_muntinlupa = $_POST["perma_city_muntinlupa"];
+            $perma_province = $_POST["perma_province"];
+            $perma_zip_code = $_POST["perma_zip_code"];
+
+            try {
+                $errors = [];
+
+                insert_pid($pdo, $name_extension, $sex, $date_of_birth, $place_of_birth, $telephone_no, $mobile_no, $civil_status,
+                        $height, $weight, $blood_type, $pagibig_id_no, $philhealth_no, $sss_no, $tin_no, $agency_no,
+                        $citizenship, $house_block, $street, $subdivision, $barangay, $city_muntinlupa, $province,
+                        $zip_code, $perma_house_block, $perma_street, $perma_subdivision, $perma_barangay, $perma_city_muntinlupa,
+                        $perma_province, $perma_zip_code);
+                header("Location: ../employee/profile.php?user_id=user_id");
+
+                $pdo = null;
+                $stmt = null;
+
+                die();
+            } catch (PDOException $e) {
+                die("Query Failed: " . $e->getMessage());
+            }
+            
         }
 
     }

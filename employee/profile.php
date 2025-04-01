@@ -86,7 +86,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                     </div>
                     <div class="fields" id="fields">
                         <div class="name">
-                                <li><p><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
+                                <li><p><?php echo !empty(isset($result["first_name"])) ? $result["first_name"] : "N/A" ?></p><label for="">FIRST NAME</label></li>
                                 <li><p><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
                                 <li id="small"><p id="small">N/A</p><label for="" id="small">SUFFIX</label></li>
@@ -110,7 +110,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
-                                <h3 id="ra">PERMANENT ADDRESS</h3>
+                                <h3 id="ra">perma ADDRESS</h3>
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
                                 <li><p><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
@@ -150,11 +150,12 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
             <div class="body-fill_up">
                 <form action="../auth/function.php" method="post">
                     <div class="first-tab">
+                        <input type="hidden" name="personal_information" value="personal">
                         <button id="update_button">update</button>
                         <li><p id="dnt"><?php echo $result["first_name"]; ?></p><label for="">FIRST NAME</label></li>
                         <li><p id="dnt"><?php echo $result["Middle_name"]; ?></p><label for="">MIDDLE NAME</label></li>
                         <li><p id="dnt"><?php echo $result["Last_name"]; ?></p><label for="">SURNAME</label></li>
-                        <li><input type="text" name="" id="small"><label for="">SUFFIX</label></li>
+                        <li><input type="text" name="name_extension" id="small"><label for="">SUFFIX</label></li>
                         <li><p id="dnt"><?php echo $result["email"]; ?></p><label for="">EMAIL</label></li>
                         <li><input type="text" name="sex"><label for="sex">Sex</label></li>
                         <li><input type="text" name="date_of_birth"><label for="date_of_birth">Date of Birth</label></li>
@@ -181,13 +182,13 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
                         <li><input type="text" name="province"><label for="province">Province</label></li>
                         <li><input type="text" name="zip_code"><label for="zip_code">Zip Code</label></li>
                         <h3 id="ra">PERMANENT ADDRESS</h3>
-                        <li><input type="text" name="permanent_house_block"><label for="permanent_house_block">House/Block</label></li>
-                        <li><input type="text" name="permanent_street"><label for="permanent_street">Street</label></li>
-                        <li><input type="text" name="permanent_subdivision"><label for="permanent_subdivision">Subdivision</label></li>
-                        <li><input type="text" name="permanent_barangay"><label for="permanent_barangay">Barangay</label></li>
-                        <li><input type="text" name="permanent_city_muntinlupa"><label for="permanent_city_muntinlupa">City/Municipality</label></li>
-                        <li><input type="text" name="permanent_province"><label for="permanent_province">Province</label></li>
-                        <li><input type="text" name="permanent_zip_code"><label for="permanent_zip_code">Zip Code</label></li>
+                        <li><input type="text" name="perma_house_block"><label for="perma_house_block">House/Block</label></li>
+                        <li><input type="text" name="perma_street"><label for="perma_street">Street</label></li>
+                        <li><input type="text" name="perma_subdivision"><label for="perma_subdivision">Subdivision</label></li>
+                        <li><input type="text" name="perma_barangay"><label for="perma_barangay">Barangay</label></li>
+                        <li><input type="text" name="perma_city_muntinlupa"><label for="perma_city_muntinlupa">City/Municipality</label></li>
+                        <li><input type="text" name="perma_province"><label for="perma_province">Province</label></li>
+                        <li><input type="text" name="perma_zip_code"><label for="perma_zip_code">Zip Code</label></li>
                     </div>
                 </form>
             </div>

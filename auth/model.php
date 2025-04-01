@@ -24,3 +24,11 @@ function get_password(object $pdo, int $id){
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+function get_pid(object $pdo, string $user_id){
+    $query = "SELECT pdspi_id FROM pds_pi WHERE user_id = :user_id";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(":user_id", $user_id, PDO::PARAM_STR);
+    $stmt->execute();
+    return $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
+}

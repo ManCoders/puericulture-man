@@ -11,3 +11,16 @@ CREATE TABLE personal_information_th(
     PRIMARY KEY(personal_id_th),
    	FOREIGN KEY(pdspis_id) REFERENCES pds_pi(pdspi_id)
 );
+
+CREATE TABLE personal_information_st_(
+    personal_information_st_id INT(11) NOT NULL AUTO_INCREMENT,
+    pdspis_id INT(11) NOT NULL,
+    name_extension VARCHAR(10) NOT NULL,
+    sex VARCHAR(6) NOT NULL,
+    date_of_birth VARCHAR(50) NOT NULL,
+    place_of_birth VARCHAR(50) NOT NULL,
+    telephone_no VARCHAR(20) NOT NULL,
+    mobile_no VARCHAR(20) NOT NULL,
+    PRIMARY KEY(personal_information_st_id),
+    FOREIGN KEY(pdspis_id) REFERENCES pds_pi(pdspi_id)
+);

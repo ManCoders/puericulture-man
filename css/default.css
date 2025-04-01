@@ -98,9 +98,7 @@ h2, h3{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 5px 1px var(--black);
-    /* background: #e0e0e0; */
-    /* box-shadow:  2px 2px 5px #b3b3b3,
-                -2px -2px 5px #ffffff; */
+    z-index: 4;
 }
 .user i:active, button:active{
     color: var(--red_line);
