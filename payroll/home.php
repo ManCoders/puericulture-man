@@ -1,7 +1,7 @@
-<?php include "header.php" ?>
+<?php include "header.php;" ?>
 
 <div class="main">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
     <h4 style="margin: 20px;">Summary Report</h4>
     <div class="charts" >
         

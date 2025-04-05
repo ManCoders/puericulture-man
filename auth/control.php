@@ -114,7 +114,7 @@ function username_taken(object $pdo, string $username){
    }
 }
 
-function uers_data(object $pdo, int $user_id, String $first_name, String $Last_name, String $Middle_name, String $email,
+function users_data(object $pdo, int $user_id, String $first_name, String $Last_name, String $Middle_name, String $email,
     string $profile) {
 
     $query = "INSERT INTO personal_information_st (pdspis_id, first_name, Last_name, Middle_name, email, user_profile)
@@ -164,7 +164,7 @@ function getUserIpnputobject(object $pdo, String $first_name, String $Last_name,
         
     $id = users_authentication($pdo, $username, $password); 
     $user_id = users_pdspi($pdo, $id); 
-    uers_data($pdo, $user_id, $first_name, $Last_name, $Middle_name, $email, $profile);
+    users_data($pdo, $user_id, $first_name, $Last_name, $Middle_name, $email, $profile);
 }
 
 
