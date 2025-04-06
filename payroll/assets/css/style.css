@@ -28,7 +28,7 @@ body {
 
 
 .logo{
-    margin: 1rem;
+    margin: .8rem;
     filter: drop-shadow(0 0 10px #ffffff);
 }
 
@@ -36,7 +36,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: start;
-    width: 12rem;
+    width: 13rem;
     position: relative;
     height: 100%;
     background-color: var(--nav_content_bg);
@@ -48,8 +48,9 @@ body {
 
 
 main{
-    display: flex;
+    display: flex;/* 
     justify-content: center;
+    align-content: end; */
     width: 100%;
     margin-left: 5px;
     height: 100%;
