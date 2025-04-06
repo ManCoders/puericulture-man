@@ -1,7 +1,7 @@
-<?php include "header.php;" ?>
 
-<div class="main">
-   
+
+<main class="main">
+   <!-- 
     <h4 style="margin: 20px;">Summary Report</h4>
     <div class="charts" >
         
@@ -127,5 +127,7 @@
             }
         });
 
-    </script>
-</div>
+    </script> -->
+
+<h1>home</h1>
+</main>

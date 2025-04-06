@@ -1,73 +1,67 @@
+*{
+    margin: 0;
+}
+
 :root{
     /* Colors */
    /* --nav_content_bg: #c43e01;
     --content-background:linear-gradient(to bottom, #dd0404,#d35151, #680101); */
-    --nav_content_bg: #c40101;
-    --content-background: #fff;
-    --nav_selection-color:#fa8282;
+    --nav_content_bg: #ec1b1b;
+    --content-background: linear-gradient(330deg, #ffffff, #fdcece, #ffffff);
+    --nav_selection-color:#ffffff;
+    --nav_selection-color-hover:#ec1b1b;
+    --font-color:#201f1f;
 
-}
-
-*{
-    margin: unset;
-    padding: unset;
 }
 
 body { 
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--nav_content_bg);
     display: flex;
-    color: #6b6969;
-}
-nav{
-    overflow: hidden;
-    width: 100%;
-    height: 94vh;
-    border-radius: 10px;
-    text-align: start;
-    background-color: var(--nav_content_bg);
-    
-}
-
-.nav-item {
-    padding: 15px;
-    width: 100%;
-    cursor: pointer;
-   
-}
-
-.nav-item:active {
-    background-color: #df4141;
-    border-radius: 10px;
-    width: 12rem;
+    color: #000000;
 }
 
 
 .nav-item a {
-    color: #f8f8f8;
-    font-size: 19px;
-    font-weight: bold;
+    color: #ffffff;
+    font-size: 15px;
     text-decoration: none;
-    padding: 23px;
+}
+
+.nav-item{
+    
+    padding-top: 1rem;
+}
+
+.logo{
+    margin: 1rem;
+    filter: drop-shadow(0 0 10px #ffffff);
 }
 
 .nav_main_bar{
-    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 12rem;
     position: fixed;
+    height: 100%;
+    background-color: var(--nav_content_bg);
+    /* border-radius: 10px; */
 }
 
-.nav-item img{
-   display: flex;
-   margin-left: 3rem;
-   
-}
+
+
+
 
 main{
-    position: fixed;
-    left: 260px;
-    width: 1080px;
-    height: 94vh;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 250px;
+    width: 1500px;
+    margin-left: 5px;
+    height: 100%;
+    /* border-radius: 10px; */
     background: var(--content-background);
     overflow: hidden;
 }
@@ -79,7 +73,7 @@ main{
 .total-spend-row{
     display:flex;
     gap:300px;
-     margin-left:40px;
+    margin-left:40px;
 }
 
 .charts
