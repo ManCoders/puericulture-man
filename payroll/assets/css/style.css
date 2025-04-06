@@ -3,9 +3,6 @@
 }
 
 :root{
-    /* Colors */
-   /* --nav_content_bg: #c43e01;
-    --content-background:linear-gradient(to bottom, #dd0404,#d35151, #680101); */
     --nav_content_bg: #ec1b1b;
     --content-background: linear-gradient(330deg, #ffffff, #fdcece, #ffffff);
     --nav_selection-color:#ffffff;
@@ -28,10 +25,7 @@ body {
     text-decoration: none;
 }
 
-.nav-item{
-    
-    padding-top: 1rem;
-}
+
 
 .logo{
     margin: 1rem;
@@ -43,7 +37,7 @@ body {
     justify-content: center;
     align-items: start;
     width: 12rem;
-    position: fixed;
+    position: relative;
     height: 100%;
     background-color: var(--nav_content_bg);
     /* border-radius: 10px; */
@@ -56,13 +50,12 @@ body {
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
-    left: 250px;
-    width: 1500px;
+    width: 100%;
     margin-left: 5px;
     height: 100%;
     /* border-radius: 10px; */
-    background: var(--content-background);
+    /* background: var(--content-background); */
+    background-color: #999292;
     overflow: hidden;
 }
 

@@ -48,29 +48,29 @@
             <div class="navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php?page=home">Dashboard</a>
+                        <a class="nav-link active" aria-current="page" href="index.php?page=home">Admin Dashboard</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            HRIS maintenance
+                            HRIS Employeer
                         </a>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="index.php?page=payroll">Payroll process</a></li>
-                            <li><a class="dropdown-item" href="#">Files 202</a></li>
-                            <li><a class="dropdown-item" href="#">Files 203</a></li>
+                            <li><a class="dropdown-item" href="index.php?page=payroll">Employee's Data</a></li>
+                            <li><a class="dropdown-item" href="#">Private Sectors</a></li>
+                            <li><a class="dropdown-item" href="#">HRI Reports</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Daily Attendance
+                            Daily Time Keeping
                         </a>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="index.php?page=payroll">Payroll process</a></li>
-                            <li><a class="dropdown-item" href="#">Files 202</a></li>
-                            <li><a class="dropdown-item" href="#">Files 203</a></li>
+                            <li><a class="dropdown-item" href="index.php?page=payroll">Daily Time Record</a></li>
+                            <li><a class="dropdown-item" href="#">Filing feedback</a></li>
+                            <li><a class="dropdown-item" href="#">Timekeeping Report</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -84,11 +84,7 @@
                             <li><a class="dropdown-item" href="index.php?page=payroll">Payroll Payslip</a></li>
                             <li><a class="dropdown-item" href="#">Payroll Allocation</a></li>
                             <li><a class="dropdown-item" href="#">Approval Summary</a></li>
-                            <li><a class="dropdown-item" href="#">Company Benefits</a></li><!-- 
-                            <li><a class="dropdown-item" href="#">SSS Contribution</a></li>
-                            <li><a class="dropdown-item" href="#">HDMF Contribution</a></li>
-                            <li><a class="dropdown-item" href="#">Philhealth Contribution</a></li>
-                            <li><a class="dropdown-item" href="#">Pagibig Contribution</a></li> -->
+                            <li><a class="dropdown-item" href="#">Company Benefits</a></li>
                             <li><a class="dropdown-item" href="#">Payroll Deduction</a></li>
                             <li><a class="dropdown-item" href="#">Monthly Labor Cost</a></li>
                             <li><a class="dropdown-item" href="#">Monthly Tax</a></li>
