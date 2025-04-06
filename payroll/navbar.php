@@ -5,40 +5,7 @@
 <script type="module" src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
 <div class="nav_main_bar">
-    <!-- <nav class="nav" id="sidebar">
-
-        <div class="logo">
-            <img style="width:100px;" src="./assets/images/pueri-logo.png" alt="Logo">
-        </div>
-        <div class="nav-item">
-            <a href="index.php?page=home" class="nav-home">
-                <span>Dashboard</span>
-            </a>
-        </div>
-
-        <div class="nav-item">
-            <a href="index.php?page=payroll" class="nav-payroll">
-                <span>Payroll Process</span>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="index.php?page=reports" class="nav-reports">
-                <span>Reports</span>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="index.php?page=employee" class="nav-employee">
-                <span>Files 201</span>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="index.php?page=setting" class="nav-setting">
-                <span>Setting</span>
-            </a>
-        </div>
-        
-    </nav> -->
-
+ 
     <nav class="navbar">
         <div class="container-fluid">
 
