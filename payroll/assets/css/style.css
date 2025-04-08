@@ -36,7 +36,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: start;
-    width: 15rem;
+    width: 14rem;
     position: relative;
     height: 100%;
     background-color: var(--nav_content_bg);
@@ -55,8 +55,8 @@ main{
     margin-left: 5px;
     height: 100%;
     /* border-radius: 10px; */
-   /*  background: var(--content-background); */
-    background-color: #505050;
+    background: var(--content-background);
+   /*  background-color: #999292; */
     overflow: hidden;
 }
 

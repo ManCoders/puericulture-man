@@ -2,7 +2,7 @@
 include 'header.php';
 require_once '../include/session.php';
 
-isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
+isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] :"No User found";
 
 ?>
 
@@ -10,11 +10,12 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] : "no user_id";
 <html lang="en">
 
 <?php
-$title = "Puericulture Emergency Hospital";
+$title = isset($_SESSION["user_id"]) ? ' <i>Welcome to</i> Puericulture Emergency Hospital' : 'Invalid';
 $image = "./assets/images/user-avatar.png";
 ?>
 
 <header>
+  <link rel="stylesheet" href="./assets/css/style.css">
     <title><?php echo $title ? $title : 'My Website'; ?></title>
 </header>
 
@@ -22,12 +23,13 @@ $image = "./assets/images/user-avatar.png";
 <?php include "navbar.php"; ?>
   <main id="view-panel">
   
+  <!-- PASSING PAGE INTO OTHER -->
     <?php $page = isset($_GET['page']) ? $_GET['page'] : 'home'; ?>
     <?php include './pages/' . $page . '.php' ?>
+
   </main>
 
 
-  <!-- <?php include "footer.php"; ?> -->
 
 </body>
 

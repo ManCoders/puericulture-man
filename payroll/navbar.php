@@ -47,14 +47,14 @@
                         </a>
                         <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
 
-                            <li><a class="dropdown-item" href="#">Payroll Summary</a></li>
-                            <li><a class="dropdown-item" href="index.php?page=payroll">Payroll Payslip</a></li>
-                            <li><a class="dropdown-item" href="#">Payroll Allocation</a></li>
-                            <li><a class="dropdown-item" href="#">Approval Summary</a></li>
-                            <li><a class="dropdown-item" href="#">Company Benefits</a></li>
-                            <li><a class="dropdown-item" href="#">Payroll Deduction</a></li>
-                            <li><a class="dropdown-item" href="#">Monthly Labor Cost</a></li>
-                            <li><a class="dropdown-item" href="#">Monthly Tax</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=1">Payroll Summary</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=2">Payroll Payslip</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=3">Payroll Allocation</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=4">Approval Summary</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=5">Company Benefits</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=6">Payroll Deduction</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=7">Monthly Labor Cost</a></li>
+                            <li><a class="dropdown-item" href="index.php?p-page=8">Monthly Tax</a></li>
 
                         </ul>
                     </li>
