@@ -10,7 +10,7 @@ isset($_SESSION["user_id"]) ? $users_id = $_SESSION["user_id"] :"No User found";
 <html lang="en">
 
 <?php
-$title = isset($_SESSION["user_id"]) ? ' <i>Welcome to</i> Puericulture Emergency Hospital' : 'Invalid';
+$title = isset($_SESSION["user_id"]) ? ' Welcome to Puericulture Emergency Hospital' : 'Invalid';
 $image = "./assets/images/user-avatar.png";
 ?>
 
