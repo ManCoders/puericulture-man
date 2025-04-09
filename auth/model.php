@@ -32,3 +32,12 @@ function get_pid(object $pdo, string $user_id){
     $stmt->execute();
     return $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+function get_profile(object $pdo, string $user_id){
+    
+    $query = "SELECT user_profile FROM personal_information_st WHERE user_id = :user_id";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(":user_id", $user_id, PDO::PARAM_STR);
+    $stmt->execute();
+    return $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
+}
