@@ -132,6 +132,8 @@
 
                 $_SESSION["user_id"] = $result["id"];
                 $_SESSION["username"] = htmlspecialchars($result["username"]);
+                // add profiles image from sign up session
+               /*  $_SESSION["profile"] = $result['profile']; */
                 $_SESSION["user_role"] = $result["user_role"];
                 $_SESSION["last_regeneration"] = time();
 

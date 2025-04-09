@@ -1,67 +1,81 @@
 <script></script>
 <link rel="stylesheet" href="./assets/css/style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<script src="./assets/npm/chart.js"></script>
+<link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
+<script type="module" src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
 <div class="nav_main_bar">
-<div class="logo"> <img style="width:100px; border-radius:50%;" src="./assets/images/puericulture_logo.jpg" alt="Logo"></div>
+ 
+    <nav class="navbar">
+        <div class="container-fluid">
 
-    <nav class="nav" id="sidebar">
-            <div class="nav-item">
-                <a href="index.php?page=home" class="nav-home">
-                    <span>Dashboard</span>
-                </a>
+            <div class="logo text-center">
+                <img style="width:100px; margin-left: 1.1rem;" src="./assets/images/pueri-logo.png" alt="Logo">
             </div>
-            
-            <div class="nav-item">
-                <a href="index.php?page=payroll" class="nav-payroll">
-                    <span>Payroll Process</span>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="index.php?page=salary" class="nav-salary">
-                    <span>Salary Reports</span>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="index.php?page=employee" class="nav-employee">
-                    <span>Files 201</span>
-                </a>
-            </div>
-            <div class="nav-item" >
-                <a href="index.php?page=setting" class="nav-setting">
-                    <span>Setting</span>
-                </a>
-            </div>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php?page=home">Admin Dashboard</a>
+                    </li>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            HRIS Employeer
+                        </a>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.php?page=payroll">Employee's Data</a></li>
+                            <li><a class="dropdown-item" href="#">Private Sectors</a></li>
+                            <li><a class="dropdown-item" href="#">HRI Reports</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Daily Time Keeping
+                        </a>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.php?page=payroll">Daily Time Record</a></li>
+                            <li><a class="dropdown-item" href="#">Filing feedback</a></li>
+                            <li><a class="dropdown-item" href="#">Timekeeping Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Payroll Entries
+                        </a>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
+
+                            <li><a class="dropdown-item" href="index.php?payroll=1">Payroll Summary</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=2">Payroll Payslip</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=3">Payroll Allocation</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=4">Approval Summary</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=5">Company Benefits</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=6">Payroll Deduction</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=7">Monthly Labor Cost</a></li>
+                            <li><a class="dropdown-item" href="index.php?payroll=8">Monthly Tax</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Generate Reports
+                        </a>
+                        <ul class="dropdown-menu bg-transparent border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.php?page=reports">Files 201</a></li>
+                            <li><a class="dropdown-item" href="#">Files 202</a></li>
+                            <li><a class="dropdown-item" href="#">Files 203</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?page=setting">Setting</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+
 </div>
-
-</div>
-
-
-<script>
-$('.nav-item').addClass('active');
-$('.nav-<?php echo $_GET['page'] ?>').css('background-color', '#007bff');
-$('.nav-<?php echo $_GET['page'] ?>').css('color', '#fff');
-
-$('.nav-item a').click(function() {
-    $('.nav-item a').removeClass('active');
-    $(this).addClass('active');
-    $(this).css('background-color', '#007bff');
-    $(this).css('color', '#fff');
-    $(this).siblings().css('background-color', '');
-    $(this).siblings().css('color', '');
-});
-
-if ($('.nav-<?php echo $_GET['page'] ?>').parent().hasClass('collapse')) {
-    const parentID = $('.nav-<?php echo $_GET['page'] ?>').parent().attr('id');
-    $(`a[href="#${parentID}"]`)
-        .removeClass('collapsed')
-        .attr('aria-expanded', true);
-    $('.nav-<?php echo $_GET['page'] ?>').parent().addClass('show');
-}
-
-
-</script>
