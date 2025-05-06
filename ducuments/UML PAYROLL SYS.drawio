@@ -130,7 +130,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="d8og31dGvo_LYGdDDww9-60" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;lt;div class=&quot;d-flex justify-content-end &quot;&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&#x9;&#x9;&lt;/span&gt;&amp;lt;a href=&quot;ajax.php?action=logout&quot; class=&quot;text-white&quot; id=&quot;logout&quot;&amp;gt;Logout&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;lt;/div&amp;gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-1400" y="-30" width="510" height="80" as="geometry" />
+          <mxGeometry x="-1520" y="-30" width="630" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d8og31dGvo_LYGdDDww9-61" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="d8og31dGvo_LYGdDDww9-60">
           <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
