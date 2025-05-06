@@ -22,8 +22,8 @@
         <mxCell id="d8og31dGvo_LYGdDDww9-6" value="function logout(){}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="d8og31dGvo_LYGdDDww9-0">
           <mxGeometry y="130" width="140" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="d8og31dGvo_LYGdDDww9-12" value="include &#39;db_data.php&#39;&lt;div&gt;$this-&amp;gt;= $conn;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="570" y="228" width="120" height="74" as="geometry" />
+        <mxCell id="d8og31dGvo_LYGdDDww9-12" value="include &#39;db_data.php&#39;;&lt;div&gt;$this-&amp;gt;$db= $conn;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="570" y="228" width="170" height="74" as="geometry" />
         </mxCell>
         <mxCell id="d8og31dGvo_LYGdDDww9-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="d8og31dGvo_LYGdDDww9-2" target="d8og31dGvo_LYGdDDww9-12">
           <mxGeometry relative="1" as="geometry" />
